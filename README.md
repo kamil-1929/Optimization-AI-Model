@@ -22,3 +22,29 @@ Ensure you have Python installed. You can install the required libraries using t
 
 ```bash
 pip install -r requirements.txt
+
+
+```bash
+conda env create -f environment.yml
+conda activate production-optimization
+```
+## Running the Code
+Run the production_optimization.py script to find the optimal production schedule and the total profit.
+python production_optimization.py
+
+## Output
+The script will display:
+
+- The status of the solution.
+- The optimal production quantities for each product.
+- The total profit.
+- The total utilization of labor, machine time, and raw materials.
+
+## License
+This project is licensed under the MIT License.
+
+
+#### requirements.txt
+
+```text
+pulp==2.6.0
