@@ -1,48 +1,44 @@
-# Production Scheduling Optimization
+# Production Optimization
 
-This project focuses on optimizing the production schedule for a factory that manufactures five different products (P1, P2, P3, P4, and P5). The goal is to maximize total profit while adhering to constraints on resource availability and production capacities.
+This project aims to optimize the production schedule for a factory that manufactures five different products (P1, P2, P3, P4, P5). Each product requires different amounts of three resources: labor, machine time, and raw materials. The goal is to maximize the total profit while considering the constraints related to resource availability and production capacities.
 
-## Problem Statement
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Testing](#testing)
+- [License](#license)
 
-The factory produces five products, each requiring different amounts of labor, machine time, and raw materials. The goal is to maximize total profit while considering constraints related to resource availability and production capacities.
+## Installation
 
-## Solution Approach
+### Using `requirements.txt`
+1. Create a virtual environment:
+    ```sh
+    python -m venv venv
+    ```
+2. Activate the virtual environment:
+    - On Windows:
+        ```sh
+        venv\Scripts\activate
+        ```
+    - On macOS/Linux:
+        ```sh
+        source venv/bin/activate
+        ```
+3. Install the dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-We use Linear Programming (LP) to solve this optimization problem. The PuLP library in Python is utilized to model and solve the LP problem.
+### Using `environment.yml`
+1. Create and activate the environment using conda:
+    ```sh
+    conda env create -f environment.yml
+    conda activate production-optimization
+    ```
 
-## Getting Started
+## Usage
 
-### Prerequisites
-
-Ensure you have Python installed. You can install the required libraries using the `requirements.txt` or `environment.yml` files.
-
-### Installing
-
-#### Using `requirements.txt`
-
-```bash
-pip install -r requirements.txt
-
-conda env create -f environment.yml
-conda activate production-optimization
-```
-## Running the Code
-Run the production_optimization.py script to find the optimal production schedule and the total profit.
+To run the optimization script:
+```sh
 python production_optimization.py
-
-## Output
-The script will display:
-
-- The status of the solution.
-- The optimal production quantities for each product.
-- The total profit.
-- The total utilization of labor, machine time, and raw materials.
-
-## License
-This project is licensed under the MIT License.
-
-
-#### requirements.txt
-
-```text
-pulp==2.6.0
