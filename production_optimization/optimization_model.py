@@ -46,3 +46,5 @@ def run_optimization():
     print(f"Total Labor Utilization: {labor_utilization} units")
     print(f"Total Machine Time Utilization: {machine_time_utilization} units")
     print(f"Total Raw Materials Utilization: {raw_materials_utilization} units")
+    
+    return model
