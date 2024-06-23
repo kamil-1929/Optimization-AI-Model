@@ -1,3 +1,2 @@
-pulp==2.6.0
-pytest==8.2.2
-flake8==6.0.0
+pulp
+pytest
