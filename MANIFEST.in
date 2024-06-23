@@ -1,2 +1,4 @@
 include requirements.txt
 include environment.yml
+include README.md
+include LICENSE
