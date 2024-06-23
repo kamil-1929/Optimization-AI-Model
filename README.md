@@ -23,8 +23,6 @@ Ensure you have Python installed. You can install the required libraries using t
 ```bash
 pip install -r requirements.txt
 
-
-```bash
 conda env create -f environment.yml
 conda activate production-optimization
 ```
