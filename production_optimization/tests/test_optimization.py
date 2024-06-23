@@ -1,15 +1,15 @@
 import unittest
 import pulp as pl
-from production_optimization import optimization_model
+from production_optimization.optimization_model import run_optimization
 
 class TestOptimization(unittest.TestCase):
     def test_optimal_solution(self):
         # Solve the model
-        optimization_model.model.solve()
+        run_optimization()
         # Check if the solution is optimal
-        self.assertEqual(pl.LpStatus[optimization_model.model.status], 'Optimal')
+        self.assertEqual(pl.LpStatus[model.status], 'Optimal')
         # Check the value of the objective function
-        self.assertAlmostEqual(pl.value(optimization_model.model.objective), 240)  # Example expected value, adjust accordingly
+        self.assertAlmostEqual(pl.value(model.objective), 240)  # Example expected value, adjust accordingly
 
 if __name__ == '__main__':
     unittest.main()
