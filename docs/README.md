@@ -1,53 +1,62 @@
-# Production Optimization
+# Production Optimization Project
 
-This project aims to optimize the production schedule for a factory that manufactures five different products (P1, P2, P3, P4, P5). Each product requires different amounts of three resources: labor, machine time, and raw materials. The goal is to maximize the total profit while considering the constraints related to resource availability and production capacities.
+This project is designed to optimize the production schedule for a factory that manufactures five different products (P1, P2, P3, P4, and P5). The goal is to maximize the total profit while considering the constraints related to resource availability and production capacities.
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Testing](#testing)
-- [License](#license)
+## Structure
 
-## Installation
+- **production_optimization**: Contains the main code for the optimization model.
+- **tests**: Contains unit tests for the optimization model.
+- **docs**: Documentation files including this README and the user guide.
+- **.github/workflows**: GitHub Actions workflow files for CI/CD.
+- **environment.yml**: Conda environment configuration.
+- **requirements.txt**: Python package dependencies.
+- **setup.py**: Setup script for installing the package.
 
-### Using `requirements.txt`
-1. Create a virtual environment:
+## Getting Started
+
+### Prerequisites
+
+- Python 3.10
+- Conda (optional)
+
+### Installation
+
+1. **Clone the repository**:
+
     ```sh
-    python -m venv venv
+    git clone https://github.com/yourusername/Assignment_AIDDM.git
+    cd Assignment_AIDDM
     ```
-2. Activate the virtual environment:
-    - On Windows:
-        ```sh
-        venv\Scripts\activate
-        ```
-    - On macOS/Linux:
-        ```sh
-        source venv/bin/activate
-        ```
-3. Install the dependencies:
+
+2. **Create a virtual environment**:
+
+    Using Conda:
+
     ```sh
+    conda env create -f environment.yml
+    conda activate production_optimization_env
+    ```
+
+    Using pip:
+
+    ```sh
+    python -m venv env
+    source env/bin/activate  # On Windows use `env\Scripts\activate`
     pip install -r requirements.txt
     ```
 
-### Using `environment.yml`
-1. Create and activate the environment using conda:
+3. **Run the optimization**:
+
     ```sh
-    conda env create -f environment.yml
-    conda activate production-optimization
+    python -m production_optimization.main
+    ```
+
+4. **Run the tests**:
+
+    ```sh
+    pytest
     ```
 
 ## Usage
 
-To run the optimization script:
-```sh
-python -m production_optimization.main
-```
-
-## Testing
-To run the tests, use:
-```sh
-pytest
-```
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+For detailed usage instructions, refer to the [User Guide](user_guide.md).
