@@ -42,3 +42,28 @@ This project aims to optimize the production schedule for a factory that manufac
 To run the optimization script:
 ```sh
 python production_optimization.py
+```
+
+## Project Structure
+
+production-optimization/
+│
+├── .github/
+│   └── workflows/
+│       └── production-app.yml
+│
+├── README.md
+├── requirements.txt
+├── environment.yml
+├── production_optimization.py
+├── test_optimization.py
+└── user_guide.md
+
+## Testing
+To run the tests, use:
+```sh
+pytest
+```
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
