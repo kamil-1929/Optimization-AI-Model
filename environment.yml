@@ -1,8 +1,5 @@
-name: production-optimization
-channels:
-  - conda-forge
+name: production_optimization_env
 dependencies:
-  - python=3.10
-  - pulp=2.6.0
-  - pytest=8.2.2
-  - flake8=6.0.0
+  - python=3.8
+  - pulp
+  - pytest
