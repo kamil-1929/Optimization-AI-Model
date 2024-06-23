@@ -1,13 +1,16 @@
 import unittest
-from production_optimization.optimization_model import run_optimization
-import pulp as pl
+from production_optimization.optimization.solver import run_optimization
 
 class TestOptimization(unittest.TestCase):
-    def test_optimal_solution(self):
-        # Solve the model and capture the returned model object
+
+    def test_optimization_solution(self):
         model = run_optimization()
-        # Check if the solution is optimal
-        self.assertEqual(pl.LpStatus[model.status], 'Optimal')
+        
+        # Check if the status is optimal
+        self.assertEqual(model.status, 1, "The optimization model did not solve to optimality.")
+        
+        # Add more specific tests as needed
+        self.assertGreaterEqual(model.objective.value(), 0, "The total profit should be non-negative.")
 
 if __name__ == '__main__':
     unittest.main()
