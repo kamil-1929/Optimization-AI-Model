@@ -1,3 +1,5 @@
+## This project was developed as part of my master's degree coursework. It serves as a practical implementation of concepts covered in my study module.
+
 # Production Optimization Project
 
 This project is designed to optimize the production schedule for a factory that manufactures five different products (P1, P2, P3, P4, and P5). The goal is to maximize the total profit while considering the constraints related to resource availability and production capacities.
